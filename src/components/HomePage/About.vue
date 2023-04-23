@@ -1,10 +1,11 @@
 <template>
   <div class="container">
     <div
-      class="row mb-3 box-shadow1"
+      class="row mb-3 box-shadow1 d-flex"
       v-for="(ListInfo, index) in ListInfos.slice(startIndex, endIndex)"
       :key="index"
     >
+      <!-- :class="ListInfo.isReverse === 1 ? 'flex-row-reverse' : 'flex-row'" -->
       <div class="col-sm-6 about">
         <div class="about-icon">
           <img :src="ListInfo.image" alt="image" />
@@ -31,7 +32,7 @@ export default {
       ListInfos: [
         {
           id: 1,
-          isReverse: false,
+          isReverse: 1,
           image: require("@/assets/Image/img_about-1.svg"),
           title: "View HTTP headers and HTTP communication",
           text_1:
@@ -43,7 +44,7 @@ export default {
         },
         {
           id: 1,
-          isReverse: true,
+          isReverse: 2,
           image: require("@/assets/Image/img_about-2.svg"),
           title: "Find devices on network",
           text_1:
@@ -55,7 +56,7 @@ export default {
         },
         {
           id: 1,
-          isReverse: false,
+          isReverse: 1,
           image: require("@/assets/Image/img_about-3.svg"),
           title: "Gather WiFi Information",
           text_1:
@@ -67,7 +68,7 @@ export default {
         },
         {
           id: 1,
-          isReverse: true,
+          isReverse: 2,
           image: require("@/assets/Image/img_about-4.svg"),
           title: "Extract files from pcap",
           text_1:
@@ -78,7 +79,7 @@ export default {
         },
         {
           id: 1,
-          isReverse: false,
+          isReverse: 1,
           image: require("@/assets/Image/img_about-5.svg"),
           title: "SMB Sniffer",
           text_1:
@@ -89,7 +90,7 @@ export default {
         },
         {
           id: 1,
-          isReverse: true,
+          isReverse: 2,
           image: require("@/assets/Image/img_about-6.svg"),
           title: "DNS queries investigation",
           text_1:
@@ -100,7 +101,7 @@ export default {
         },
         {
           id: 1,
-          isReverse: false,
+          isReverse: 1,
           image: require("@/assets/Image/img_about-7.svg"),
           title: "Analyze ARP packets",
           text_1:
@@ -111,7 +112,7 @@ export default {
         },
         {
           id: 1,
-          isReverse: false,
+          isReverse: 2,
           image: require("@/assets/Image/img_about-8.svg"),
           title: "Find passwords in pcap file",
           text_1:
@@ -122,7 +123,7 @@ export default {
         },
         {
           id: 1,
-          isReverse: false,
+          isReverse: 1,
           image: require("@/assets/Image/img_about-9.svg"),
           title: "Pcap files processing API",
           text_1:
@@ -133,7 +134,7 @@ export default {
         },
         {
           id: 1,
-          isReverse: false,
+          isReverse: 2,
           image: require("@/assets/Image/img_about-10.svg"),
           title: "SSL/TLS Information",
           text_1:
